@@ -4,7 +4,7 @@ let newSentence = "";
 
 let k = 1;
 
-function addExcitement(wordArray, punct) {
+ addExcitement = (wordArray, punct) => {
     for (let i = 0; i < wordArray.length; i++) {
         if ((i + 1) % 3 === 0) {
         newSentence += ` ${wordArray[i]}${punct.repeat(k++)}`;
@@ -17,10 +17,10 @@ function addExcitement(wordArray, punct) {
     }
 }
 
-addExcitement(sentence, "?");
-// addExcitement(sentence, "@@");
+// addExcitement(sentence, "?");
+// addExcitement(sentence, "@");
 
-// addExcitement(daBombSent, "!!");
+addExcitement(daBombSent, "!!");
 
 
 
