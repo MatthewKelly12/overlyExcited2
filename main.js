@@ -2,16 +2,25 @@ let sentence = ["The","walrus","danced","through","the","trees","in","the","ligh
 let daBombSent = ["Tweedle", "Dee", "Doodle", "Dumb", "Tiki", "Bum", "Get", "You", "Some"];
 let newSentence = "";
 
-function addExcitement(wordArray, sent) {
+let k = 1;
+
+function addExcitement(wordArray, punct) {
     for (let i = 0; i < wordArray.length; i++) {
-        newSentence += ` ${wordArray[i]}`;
+        if ((i + 1) % 3 === 0) {
+        newSentence += ` ${wordArray[i]}${punct.repeat(k++)}`;
         console.log(newSentence);
+        }
+        else {
+            newSentence += ` ${wordArray[i]}`;
+        }
 
     }
 }
 
-addExcitement(sentence);
-addExcitement(daBombSent);
+addExcitement(sentence, "?");
+// addExcitement(sentence, "@@");
+
+// addExcitement(daBombSent, "!!");
 
 
 
